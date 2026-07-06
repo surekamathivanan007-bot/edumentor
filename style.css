@@ -1,0 +1,146 @@
+:root {
+    --color-bg: #f7f8fa;
+    --color-surface: #ffffff;
+    --color-primary: #2b5fa8;
+    --color-primary-dark: #1d4680;
+    --color-text: #1f2430;
+    --color-muted: #5b6472;
+    --color-error: #b3261e;
+    --color-border: #d7dbe0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0 1rem 3rem;
+    line-height: 1.5;
+}
+
+header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 0 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.25rem;
+    color: var(--color-primary-dark);
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.subject-row {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.subject-row label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    gap: 0.2rem;
+}
+
+.checkbox-label {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 0.5rem !important;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus,
+button:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 1px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#add-subject-btn {
+    background: var(--color-surface);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+#generate-btn {
+    background: var(--color-primary);
+    color: white;
+}
+
+#generate-btn:hover {
+    background: var(--color-primary-dark);
+}
+
+.remove-subject-btn {
+    background: transparent;
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+    width: fit-content;
+}
+
+.error-text {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+.reason-text {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+#plan-output ol {
+    padding-left: 1.2rem;
+}
+
+#plan-output li {
+    margin-bottom: 0.75rem;
+}
+
+.placeholder-text {
+    color: var(--color-muted);
+}
